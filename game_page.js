@@ -43,8 +43,8 @@ function send()
     document.getElementById("word").value = "";
 
 }
-var question_turn = "Player1";
-var answer_turn = "Player2";
+var question_turn = "player1";
+var answer_turn = "player2";
 
 function check()
 {
@@ -54,32 +54,39 @@ function check()
 
 if (answer == word)
 {
-   if(answer_turn == "Player1")
+   if(answer_turn == "player1")
    {
     player1_score = player1_score + 1;
     document.getElementById("player1_score").innerHTML = player1_score;
-   }    else{
+   }    
+   else
+   {
        player2_score = player2_score + 1;
        document.getElementById("player2_score").innerHTML = player2_score;
    }
 }
 
-if(question_turn == "Player1")
+if(question_turn == "player1")
 {
- question_turn = "Player2";
+ question_turn = "player2";
  document.getElementById("player_question").innerHTML= "Question turn - " + player2_name;
-} else{
-    question_turn = "Player1";
+} 
+else
+{
+    question_turn = "player1";
     document.getElementById("player_question").innerHTML= "Question turn - " + player1_name;
 }
 
-if(answer_turn == "Player1")
+if(answer_turn == "player1")
 {
- answer_turn = "Player2";
+ answer_turn = "player2";
  document.getElementById("player_answer").innerHTML= "Answer turn - " + player2_name;
-} else{
-    answer_turn = "Player1";
+} 
+else
+{
+    answer_turn = "player1";
     document.getElementById("player_answer").innerHTML= "Answer turn - " + player1_name;
 }
 document.getElementById("output").innerHTML = "";
+
 }
