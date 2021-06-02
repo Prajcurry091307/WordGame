@@ -57,11 +57,13 @@ if (answer == word)
    if(answer_turn == "player1")
    {
     player1_score = player1_score + 1;
+       console.log("Player 1 score is" + player1_score)
     document.getElementById("player1_score").innerHTML = player1_score;
    }    
    else
    {
        player2_score = player2_score + 1;
+       console.log("Player 2 score is" + player2_score);
        document.getElementById("player2_score").innerHTML = player2_score;
    }
 }
